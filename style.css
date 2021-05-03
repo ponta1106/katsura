@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background: #eee;
+}
+
+.container {
+  position: relative;
+  width: 320px;
+  margin: 20px auto;
+}
+
+.katsura,
+.takizawa {
+  width: 320px;
+  height: 300px;
+  position: absolute;
+}
+
+.katsura {
+  background-image: url("katsura.png");
+  background-size: cover;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  animation-name: sizeScale;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.takizawa {
+  background-image: url("takizawa.png");
+  background-size: cover;
+  z-index: 0;
+  top: 70px;
+  left: 0px;
+  transform: scale(0.9);
+  animation-name: changePosition;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes sizeScale {
+  25% {
+    transform: rotate(5deg);
+    left: 10px;
+  }
+  75% {
+    transform: rotate(-5deg);
+    left: -10px;
+  }
+}
+
+@keyframes changePosition {
+  25% {
+    left: 10px;
+  }
+  75% {
+    left: -10px;
+  }
+}
